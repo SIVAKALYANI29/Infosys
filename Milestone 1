@@ -1,0 +1,39 @@
+import networkx as nx
+from pyvis.network import Network
+
+# ✅ Step 1: Define triples directly in code
+triples = [
+    {"subject": "Alan Turing", "object": "Turing Machine", "relation": "invented"},
+    {"subject": "Ada Lovelace", "object": "Analytical Engine", "relation": "described"},
+    {"subject": "Grace Hopper", "object": "COBOL", "relation": "developed"},
+    {"subject": "Tim Berners-Lee", "object": "World Wide Web", "relation": "created"},
+    {"subject": "Linus Torvalds", "object": "Linux Kernel", "relation": "initiated"},
+]
+
+# ✅ Step 2: Create a directed NetworkX graph
+G = nx.DiGraph()
+
+# ✅ Step 3: Add nodes and edges with color coding
+for triple in triples:
+    subj = triple["subject"]
+    obj = triple["object"]
+    rel = triple["relation"]
+
+    G.add_node(subj, color="lightblue")     # Subject node
+    G.add_node(obj, color="lightgreen")     # Object node
+    G.add_edge(subj, obj, label=rel)        # Edge with relation label
+
+# ✅ Step 4: Create PyVis network
+net = Network(height="600px", width="100%", directed=True, bgcolor="#222222", font_color="white")
+net.toggle_physics(False)  # Static layout
+
+# ✅ Step 5: Load NetworkX graph into PyVis
+net.from_nx(G)
+
+# ✅ Step 6: Customize edges with tooltips and labels
+for e in G.edges(data=True):
+    net.add_edge(e[0], e[1], title=e[2]["label"], label=e[2]["label"])
+
+# ✅ Step 7: Save and show the graph
+net.write_html("my_knowledge_graph.html")
+print(" Graph saved as my_knowledge_graph.html — open it in your browser!")
