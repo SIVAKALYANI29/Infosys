@@ -1,0 +1,62 @@
+# 🧠 Milestone 1 Final Task: Mini Knowledge Graph Builder
+
+**Covers Topics from Days 1–6**  
+*(Project Understanding • Environment Setup • Git & Structure • NER • Relation Extraction • Graph Visualization)*
+
+---
+
+## 🎯 Objective
+
+You will build a Mini Knowledge Graph System that extracts useful information from text and visualizes how concepts are connected.
+
+By completing this task, you will demonstrate your understanding of:
+- How to prepare and organize a project environment  
+- How to extract meaningful entities and relationships from text  
+- How to represent knowledge in a visual graph form  
+
+---
+
+## 📌 Project Title
+
+**Mini Knowledge Graph Builder**
+
+---
+
+## 📂 Dataset Details
+
+**Tech Legends and Their Inventions**  
+This project shows how famous people in computer science are connected to the technologies they helped build or describe.
+
+---
+
+## 📝 Short Description of Your Dataset
+
+The dataset includes five entries. Each one links a person to a technology using a simple action like "invented" or "created".  
+It helps us understand who did what in tech history.
+
+---
+
+## 🔍 Summary of Entities and Relationships Extracted
+
+We extracted three parts from each entry:
+- **Subject**: the person (e.g., Alan Turing)  
+- **Relation**: the action (e.g., invented)  
+- **Object**: the technology (e.g., Turing Machine)  
+
+This forms a clear connection between people and their work.
+
+---
+
+## 🖼️ Screenshot of Your Knowledge Graph
+
+You can take a screenshot of the graph showing nodes like **"Alan Turing"** connected to **"Turing Machine"** with the label **"invented"**.  
+If you want, I can help you generate this graph using Python and PyVis.
+
+---
+
+## 💡 Reflection: What Did I Learn from Milestone 1?
+
+- I learned how to build a dataset using triples (subject, relation, object).  
+- I understood how to show connections between people and technologies.  
+- I also learned how to turn data into a visual graph that’s easy to understand.  
+- This helped me see how knowledge graphs work in real life.
